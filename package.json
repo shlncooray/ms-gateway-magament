@@ -1,0 +1,39 @@
+{
+  "name": "ms-gateway-magament",
+  "version": "1.0.0",
+  "description": "Gateway Management REST API",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js --exec babel-node",
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "keywords": [
+    "gateway",
+    "devices",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Shelan Cooray",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.2",
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "jest": "^29.4.3",
+    "supertest": "^6.3.3"
+  }
+}

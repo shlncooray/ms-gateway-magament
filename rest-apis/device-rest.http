@@ -1,0 +1,48 @@
+###
+# Retrieve all devices
+GET http://localhost:4000/device
+
+###
+# Retrieve a single device by _id. Replace ':deviceId'  or '63f64d44c0dd426ff351bf60' with a valid device ID
+# In order to obtain :deviceId first need to create a device and get the _id from response or GET All devices API
+# GET http://localhost:4000/device/:deviceId
+GET http://localhost:4000/device/63f64d44c0dd426ff351bf60
+
+###
+# Create a new device without gatewayID
+POST http://localhost:4000/device
+content-type: application/json
+
+{
+    "vendor": "Pro Link 2",
+    "status": "Offline"
+}
+
+###
+# Create a new device with gatewayID
+POST http://localhost:4000/device
+content-type: application/json
+
+{
+    "vendor": "Pro Link 2",
+    "status": "Offline",
+    "gatewayId": "63f5bf7c29e22033eaa2c3ba"
+}
+
+###
+# Update a device by _id. Replace ':deviceId'  or '63f64d44c0dd426ff351bf60' with a valid device _id
+# In order to obtain :deviceId first need to create a device and get the _id from response or GET All devices API
+# PUT http://localhost:4000/device/:deviceId
+PUT http://localhost:4000/device/63f64d44c0dd426ff351bf60
+content-type: application/json
+
+{
+    "vendor": "Pro Link 2.1",
+    "status": "Online"
+}
+
+###
+# Delete a device by _id. Replace ':deviceId'  or '63f64d44c0dd426ff351bf60' with a valid device _id
+# In order to obtain :deviceId first need to create a device and get the _id from response or GET All devices API
+# DELETE http://localhost:4000/device/:deviceId
+DELETE http://localhost:4000/device/63f64d44c0dd426ff351bf60
